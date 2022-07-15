@@ -1,0 +1,149 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+:root{
+    /* --first-section:  hsl(212, 207, 207, 0.7);
+    --test_color: hsl(0,0,0,0); */
+    --body-bg: hsl(210,22%,91%);
+    --first-section: hsl(0,0%,98%);
+    --second-section: hsl(0,0%,100%);
+    --third-section: hsl(223, 100%, 99%);
+    --primary: hsl(214, 88%, 48%);
+    --primary-light: hsl(211, 100%, 95%);
+    --secondary: hsl(252,4%,54%);
+    --tertiary: hsl(192,33%, 97%);
+    --active: hsl(240, 1%, 14%);
+    --divider: hsl(0,0%,87%);
+}
+body{
+    background: var(--body-bg);
+    font-family: 'montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+    
+}
+button{
+    font-family: inherit;
+    background: var(--primary-light);
+    border: none;
+    transition: 0.5s;
+    cursor: pointer;
+
+}
+button:hover{
+    background: var(--primary);
+    color: #fff;
+}
+.Dashboard{
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    border-radius:0.3rem;
+    overflow: hidden;
+}
+
+
+ .first-section{
+ /* Flex is like a ratio to set or divide a class created eg Dashboard */
+    flex: 1.1;
+    background: var(--first-section);
+   
+}
+.Logo{
+    text-align: center;
+    padding: 1rem;
+}
+.Logo h3{
+    font-style: italic;
+}
+.Logo h3 span{
+    color: var(--primary);
+}
+.list-container {
+    padding-right: 0.2rem;
+}
+.list-container li{
+    padding-left: 1rem ;
+    padding-block: 0.7rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: 0.5s;
+    color: var(--secondary);
+    cursor: pointer;
+}
+.list-container li ion-icon{
+    color: var(--primary);
+}
+.list-container li:hover{
+    background: var(--primary-light);
+}
+.list-container li.active{
+    background: #fff;
+    color: #000;
+    font-weight: bold;
+    position: relative;
+}
+.list-container li.active::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0.25rem;
+    background: var(--primary);
+    border-radius: 0.5rem;
+}
+
+/* Customer Service */
+.Customer-Service{
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-inline: 1rem;
+
+}
+
+.Customer-Service p{
+   /* padding: 10px; */
+   color: var(--secondary);
+   font-size: 0.9rem;
+}
+.Customer-Service button{
+    padding: 0.55rem;
+    margin-bottom: 1rem;
+    border-radius: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.second-section{
+    flex: 3.2;
+    background: var(--second-section);
+}
+.third-section{
+   flex: 1.4; 
+   background: var(--third-section);
+}
+
+.firstLayer{
+    display: flex;
+    align-items: center;
+   
+    padding-top: 1rem;
+    padding-left: 1rem;
+
+}
+ h4 ion-icon{
+    line-height: 1.5;
+    
+}
